@@ -43,8 +43,8 @@ if (message.content.startsWith(adminprefix + 'sa')) {
 client.on('guildMemberAdd', member => {
 let channel = member.guild.channels.get("494591536797843475");
 if (member.user.bot) return;
-setTimeout(function(){
- channel.send(`**Welcome To Clám Server , :sleeping: :reminder_ribbon:  '**`)
+setTimeout(() =>{
+    channel.send(`**Welcome To Clám Server , :sleeping: :reminder_ribbon:  '**`)
 }, 2000)
 })
 client.login(process.env.BOT_TOKEN);
