@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const adminprefix = "+";
-const developers = ['269466566775668737'];
+const developers = ['450711003324350485'];
 
 console.log("Mohaaaaaaaaa");
 
@@ -40,5 +40,11 @@ if (message.content.startsWith(adminprefix + 'sa')) {
     message.channel.send(`جاري تغيير الأفتار... : `);
 }
 });
-
+client.on('guildMemberAdd', member => {
+let channel = member.guild.channels.get("494591536797843475");
+if (member.user.bot) return;
+setTimeout(function(){
+ channel.send(`**Welcome To Clám Server , :sleeping: :reminder_ribbon:  '**`)
+}, 2000)
+})
 client.login(process.env.BOT_TOKEN);
