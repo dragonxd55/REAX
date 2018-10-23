@@ -40,11 +40,10 @@ if (message.content.startsWith(adminprefix + 'sa')) {
     message.channel.send(`جاري تغيير الأفتار... : `);
 }
 });
-client.on('guildMemberAdd', member => {
-let channel = member.guild.channels.get("494591536797843475");
-if (member.user.bot) return;
-setTimeout(() =>{
-    channel.send(`**Welcome To Clám Server , :sleeping: :reminder_ribbon:  '**`)
-}, 2000)
+client.on('guildMemberAdd', m => {
+            guild = client.guilds.get("307979183034990603");
+    var c = guild.channels.find('name', `clam`);
+    c.send(`**Welcome To Clám Server , :sleeping: :reminder_ribbon:  '**`)
 })
+
 client.login(process.env.BOT_TOKEN);
